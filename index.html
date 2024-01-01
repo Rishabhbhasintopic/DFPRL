@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Contact Page</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Applegater-Normal&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Matura+MT+Script+Capitals&display=swap');
+
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background: linear-gradient(45deg, #FF6B6B, #4CAF50, #AC92EB, #FFD166);
@@ -19,6 +23,7 @@
       flex-direction: column;
       height: 100vh;
       text-align: center;
+      overflow: hidden; /* Prevent scrollbars during animation */
     }
 
     h1, h2, p {
@@ -26,8 +31,15 @@
     }
 
     h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-family: 'Matura MT Script Capitals', cursive;
+      font-size: 3em;
+      font-style: normal;
+      letter-spacing: 10px;
+      animation: fadeInUp 1s ease-out; /* Welcome animation */
+    }
+
+    h1 span {
+      color: #b73537; /* Color for the specified letters */
     }
 
     h2 {
@@ -41,9 +53,10 @@
     }
 
     img {
-      width: 80%; /* Adjust the width as needed */
-      max-width: 200px; /* Set a maximum width */
+      width: 100%; /* Adjusted width for a larger logo */
+      max-width: 300px; /* Set a maximum width */
       margin-bottom: 20px;
+      animation: scaleIn 1s ease-out; /* Logo animation */
     }
 
     @keyframes gradientAnimation {
@@ -55,6 +68,26 @@
       }
       100% {
         background-position: 0% 50%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
       }
     }
 
@@ -73,16 +106,22 @@
       }
 
       img {
-        width: 100%;
+        max-width: 200px; /* Adjusted max-width for smaller screens */
       }
+    }
+    p.welcome {
+    font-size: 1.5em;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out; /* Welcome animation */
     }
   </style>
 </head>
 <body>
 
   <div>
-    <img src="./logo.png" alt="Company Logo">
-    <h1>DigitalForge</h1>
+    <p class="welcome">Welcome to Digital Forge!</p>
+    <img src="logo.png" alt="Company Logo">
+    <h1><span>D</span>igital <span>F</span>orge</h1>
     <h2>Tagline Goes Here</h2>
     <p>Contact Information:</p>
     <p>Email: your.email@example.com</p>
