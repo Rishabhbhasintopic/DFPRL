@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Page</title>
   <style>
-        body {
+    body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
+      background-color: #e6f7ff;
+      color: #333;
     }
 
     header {
-      background-color: #333;
+      background-color: #4caf50;
       color: #fff;
       text-align: center;
       padding: 1em;
@@ -44,18 +45,27 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
     }
 
     button:hover {
       background-color: #45a049;
     }
-    body {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
+
+    /* Additional styling for a colorful and cool look */
+    label {
+      color: #4caf50;
+      font-weight: bold;
     }
 
-    .fadeIn {
+    h1, h2 {
+      margin-bottom: 0.5em;
+    }
+
+    /* Custom animation for a subtle effect */
+    body.fadeIn {
       opacity: 1;
+      transition: opacity 1s ease-in-out;
     }
   </style>
 </head>
