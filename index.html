@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Page</title>
   <style>
-    body {
+        body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
@@ -49,6 +49,14 @@
     button:hover {
       background-color: #45a049;
     }
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .fadeIn {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -59,7 +67,7 @@
   </header>
 
   <section>
-    <form action="#" method="post">
+    <form id="contactForm">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -69,9 +77,38 @@
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="button" onclick="submitForm()">Submit</button>
     </form>
   </section>
+
+ <!-- Add this script block after your existing script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("fadeIn");
+    });
+  
+    function submitForm() {
+      var form = document.getElementById("contactForm");
+  
+      // Use FormData to easily gather form data
+      var formData = new FormData(form);
+  
+      // Use fetch API to send data to the server
+      fetch("contact.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        // Display the response from the server
+        alert(data);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+    }
+  </script>
+  
 
 </body>
 </html>
