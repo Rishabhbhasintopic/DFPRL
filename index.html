@@ -23,7 +23,6 @@
       flex-direction: column;
       height: 100vh;
       text-align: center;
-      overflow: hidden; /* Prevent scrollbars during animation */
     }
 
     h1, h2, p {
@@ -37,6 +36,7 @@
       letter-spacing: 10px;
       animation: fadeInUp 1s ease-out; /* Welcome animation */
       color: black;
+      margin-bottom: 0;
     }
 
     h1 span {
@@ -60,6 +60,29 @@
       animation: scaleIn 1s ease-out; /* Logo animation */
     }
 
+    p.welcome {
+      font-size: 1.5em;
+      margin-top: 20px;
+      animation: fadeInUp 1s ease-out; /* Welcome animation */
+    }
+
+    p.tagline {
+      font-size: 1em;
+    }
+
+    /* Footer Styles */
+    footer {
+    width: 100%;
+    height: 20px; /* Adjust the height as needed */
+    padding: 10px;
+    /* background: #3498db; Blue color for the footer */
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }
+
+    /* Gradient Animation for Background */
     @keyframes gradientAnimation {
       0% {
         background-position: 0% 50%;
@@ -69,26 +92,6 @@
       }
       100% {
         background-position: 0% 50%;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes scaleIn {
-      from {
-        transform: scale(0.8);
-      }
-      to {
-        transform: scale(1);
       }
     }
 
@@ -110,11 +113,6 @@
         max-width: 200px; /* Adjusted max-width for smaller screens */
       }
     }
-    p.welcome {
-    font-size: 1.5em;
-    margin-top: 20px;
-    animation: fadeInUp 1s ease-out; /* Welcome animation */
-    }
   </style>
 </head>
 <body>
@@ -125,9 +123,17 @@
     <h1><span>D</span>igital <span>F</span>orge</h1>
     <p class="tagline">Forging Tomorrow's Digital Excellence, Today.</p>
     <p>Contact Information:</p>
-    <p>Email: your.email@example.com</p>
-    <p>Phone: +1 123-456-7890</p>
+    <p>CEO: Rishabh Bhasin</p>
+    <p>Company: Rishabh's LAB</p>
+    <p>Phone: +91 9876617989</p>
+    <p>Alternate Phone: +91 183-2913223</p>
+    <p>Email: rishabhbhasin7777@gmail.com</p>
+    <p>Instagram: <a href="https://www.instagram.com/digitalforgepbrl/" target="_blank">Digital Forge</a></p>
   </div>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Digital Forge. All rights reserved. | Powered by Rishabh's LAB</p>
+  </footer>
 
 </body>
 </html>
