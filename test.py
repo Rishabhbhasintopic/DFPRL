@@ -2,4 +2,6 @@ def gen_qr(content):
     import qrcode as qr
 
     code = qr.make(content)
-    code.save(f"D:/Rishabh\'s DataBase/Projects/HOPE script/DataBase/Images/qr.png")
+    code.save(f"./qr.png")
+
+gen_qr("https://rishabhbhasintopic.github.io/DFPRL/")
