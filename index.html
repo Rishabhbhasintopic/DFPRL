@@ -3,122 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Page</title>
+  <title>Cool Contact Page</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #e6f7ff;
-      color: #333;
-    }
-
-    header {
-      background-color: #4caf50;
-      color: #fff;
-      text-align: center;
-      padding: 1em;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #4caf50;
+      background: linear-gradient(45deg, #FF6B6B, #4CAF50, #AC92EB, #FFD166);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s infinite;
       color: white;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
 
-    button:hover {
-      background-color: #45a049;
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
     }
 
-    /* Additional styling for a colorful and cool look */
-    label {
-      color: #4caf50;
-      font-weight: bold;
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
     }
 
-    h1, h2 {
-      margin-bottom: 0.5em;
-    }
-
-    /* Custom animation for a subtle effect */
-    body.fadeIn {
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>My Computer Company</h1>
-    <h2>Contact Us</h2>
-  </header>
-
-  <section>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="button" onclick="submitForm()">Submit</button>
-    </form>
-  </section>
-
- <!-- Add this script block after your existing script -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.body.classList.add("fadeIn");
-    });
-  
-    function submitForm() {
-      var form = document.getElementById("contactForm");
-  
-      // Use FormData to easily gather form data
-      var formData = new FormData(form);
-  
-      // Use fetch API to send data to the server
-      fetch("contact.php", {
-        method: "POST",
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        // Display the response from the server
-        alert(data);
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-    }
-  </script>
-  
+  <div>
+    <h1>Contact Me</h1>
+    <p>Email: your.email@example.com</p>
+    <p>Phone: +1 123-456-7890</p>
+  </div>
 
 </body>
 </html>
