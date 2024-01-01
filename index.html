@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Contact Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Applegater-Normal&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
@@ -60,6 +62,15 @@
       animation: scaleIn 1s ease-out; /* Logo animation */
     }
 
+    .contact-info {
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white for glass effect */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+      text-align: left; /* Align text to the left */
+    }
+
     p.welcome {
       font-size: 1.5em;
       margin-top: 20px;
@@ -68,19 +79,22 @@
 
     p.tagline {
       font-size: 1em;
+      border: 2px solid #b73537;
+      border-radius: 20px;
+      color: black;
     }
 
     /* Footer Styles */
     footer {
-    width: 100%;
-    height: 20px; /* Adjust the height as needed */
-    padding: 10px;
-    /* background: #3498db; Blue color for the footer */
-    color: white;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-  }
+      width: 100%;
+      height: 20px; /* Adjust the height as needed */
+      padding: 10px;
+      background: #333; /* Solid color for the footer */
+      color: white;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
 
     /* Gradient Animation for Background */
     @keyframes gradientAnimation {
@@ -113,27 +127,30 @@
         max-width: 200px; /* Adjusted max-width for smaller screens */
       }
     }
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+    .color-black{
+      color: black;
+    }
   </style>
 </head>
 <body>
 
   <div>
-    <p class="welcome">Welcome to Digital Forge!</p>
     <img src="logo.png" alt="Company Logo">
     <h1><span>D</span>igital <span>F</span>orge</h1>
     <p class="tagline">Forging Tomorrow's Digital Excellence, Today.</p>
-    <p>Contact Information:</p>
-    <p>CEO: Rishabh Bhasin</p>
-    <p>Company: Rishabh's LAB</p>
-    <p>Phone: +91 9876617989</p>
-    <p>Alternate Phone: +91 183-2913223</p>
-    <p>Email: rishabhbhasin7777@gmail.com</p>
-    <p>Instagram: <a href="https://www.instagram.com/digitalforgepbrl/" target="_blank">Digital Forge</a></p>
+    
+    <!-- Contact Information Box -->
+    <div class="contact-info">
+      <p class="color-black" align="center" style="font-size: 1.5em;">Contact Information:</p>
+      <p class="color-black"><i class="fa fa-phone"></i> Phone: <a href="tel:+919876617989">+91 9876617989</a></p>
+      <p class="color-black"><i class="fa fa-envelope"></i> Email: <a href="mailto:rishabhbhasin7777@gmail.com">rishabhbhasin7777@gmail.com</a></p>
+      <p class="color-black"><i class="fa fa-instagram"></i> Instagram: <a href="https://www.instagram.com/digitalforgepbrl/" target="_blank">Digital Forge</a></p>
+      <p class="color-black"><i class="fa fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/919876617989" target="https://wa.me/919876617989">+91 9876617989</a></p>
+    </div>
   </div>
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 Digital Forge. All rights reserved. | Powered by Rishabh's LAB</p>
-  </footer>
-
 </body>
 </html>
